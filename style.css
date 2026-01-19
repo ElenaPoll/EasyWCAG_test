@@ -11,7 +11,7 @@ body, html {
     align-items: center;
 }
 
-/* Contenitore principale che occupa l'area visiva */
+/* Contenitore principale */
 .main-container {
     width: 85%;
     max-width: 1000px;
@@ -21,9 +21,21 @@ body, html {
     position: relative;
 }
 
+/* --- SEZIONE LINK: Forza il colore azzurro --- */
+a, a:visited {
+    color: #3498db; /* Azzurro */
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #2980b9; /* Un azzurro leggermente più scuro al passaggio del mouse */
+    text-decoration: underline;
+}
+
 /* Stile del titolo verde */
 .title {
-    color: #88b04b; /* Verde simile allo screenshot */
+    color: #88b04b;
     font-size: 2.5rem;
     margin-bottom: 80px;
 }
@@ -36,9 +48,9 @@ body, html {
     max-width: 850px;
 }
 
-/* Posizionamento del pulsante in basso a destra */
+/* Posizionamento del pulsante */
 .footer {
-    margin-top: auto; /* Spinge il footer in fondo */
+    margin-top: auto;
     display: flex;
     justify-content: flex-end;
     padding-bottom: 20px;
@@ -59,6 +71,7 @@ body, html {
 
 .btn-start:hover {
     background-color: #e0e0e0;
+    color: #333; /* Garantisce che il testo del bottone non diventi azzurro */
 }
 
 .arrow {
