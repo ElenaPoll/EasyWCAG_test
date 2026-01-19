@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 11 - Questionario Finale</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #88b04b;
+            --text-main: #2c3e50;
+            --text-light: #5f6a72;
+            --bg-button: #f8f9fa;
+            --bg-hover: #e9ecef;
+            --accent-blue: #3498db;
+            --success-green: #27ae60;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .main-container {
+            width: 85%;
+            max-width: 1000px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 60px 0;
+            box-sizing: border-box;
+        }
+
+        .header-row {
+            margin-bottom: 60px;
+        }
+
+        .title {
+            color: var(--primary-green);
+            font-size: 2.4rem;
+            margin: 0;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+
+        .content {
+            flex-grow: 1;
+        }
+
+        .content p {
+            line-height: 1.8;
+            margin-bottom: 25px;
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 900px;
+        }
+
+        .content a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .content a:hover {
+            border-bottom: 1px solid var(--accent-blue);
+        }
+
+        /* Stili per la sezione Condividi */
+        .share-section {
+            margin-top: 40px;
+            padding: 25px;
+            background-color: #fcfcfc;
+            border: 1px dashed #ddd;
+            border-radius: 12px;
+        }
+
+        .copy-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .link-display {
+            background: #eee;
+            padding: 8px 15px;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 1rem;
+            color: var(--text-main);
+        }
+
+        .btn-copy {
+            background-color: var(--primary-green);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn-copy:hover {
+            background-color: #769a3f;
+        }
+
+        .btn-copy.copied {
+            background-color: var(--success-green);
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: auto;
+            padding-bottom: 20px;
+        }
+
+        .btn-back {
+            background-color: var(--bg-button);
+            color: var(--text-main);
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            border: 1px solid #e0e0e0;
+        }
+
+        .btn-back:hover {
+            background-color: var(--bg-hover);
+            transform: translateY(-2px);
+        }
+
+        .arrow {
+            font-size: 1.1rem;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="main-container">
+        <header class="header-row">
+            <h1 class="title">Questionario</h1>
+        </header>
+
+        <section class="content">
+            <p>Grazie mille! Siamo quasi alla fine del test.</p>
+            <p>Ora arriva la parte più importante: la tua opinione.</p>
+            <p>Ti invitiamo a compilare il seguente <a href="https://docs.google.com/forms/d/e/1FAIpQLSekfYcmEkUtaa_bNNS_Wdb7FynyOEusLGVQlNlhBkNDS8ZVWQ/viewform" target="_blank">questionario anonimo</a> per condividere le tue impressioni sullo strumento EasyWCAG.</p>
+            
+            <div class="share-section">
+                <p>Se conosci altri sviluppatori front-end che potrebbero partecipare a questa ricerca, condividi con loro il link all'attività:</p>
+                <div class="copy-wrapper">
+                    <span class="link-display" id="linkToCopy">https://github.com/ElenaPoll/EasyWCAG_test</span>
+                    <button class="btn-copy" onclick="copyLink()" id="copyBtn">Copia link</button>
+                </div>
+            </div>
+
+            <p style="margin-top: 30px;">Grazie ancora per il tempo e l’attenzione che ci hai dedicato!</p>
+        </section>
+
+        <footer class="navigation">
+            <a href="step10.html" class="btn-back">
+                <span class="arrow">&lsaquo;</span> Torna indietro
+            </a>
+        </footer>
+    </main>
+
+    <script>
+        function copyLink() {
+            const linkText = document.getElementById('linkToCopy').innerText;
+            const btn = document.getElementById('copyBtn');
+            
+            navigator.clipboard.writeText(linkText).then(() => {
+                const originalText = btn.innerText;
+                btn.innerText = 'Copiato!';
+                btn.classList.add('copied');
+                
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 2 - Design Armonioso</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #88b04b;
+            --timer-yellow: #f1c40f;
+            --text-main: #2c3e50;
+            --text-light: #5f6a72;
+            --bg-button: #f8f9fa;
+            --bg-hover: #e9ecef;
+            --accent-blue: #3498db;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Inter', sans-serif; /* Font più pulito */
+            background-color: #ffffff;
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .main-container {
+            width: 85%;
+            max-width: 1000px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 60px 0; /* Margini più generosi */
+            box-sizing: border-box;
+        }
+
+        /* Header armonioso */
+        .header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .title {
+            color: var(--primary-green);
+            font-size: 2.4rem;
+            margin: 0;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+
+        .timer-container {
+            display: flex;
+            align-items: center;
+            color: var(--timer-yellow);
+            font-weight: 600;
+            font-size: 1.1rem;
+            background: #fffdf0; /* Sfondo leggerissimo per il timer */
+            padding: 10px 20px;
+            border-radius: 50px;
+            border: 1px solid #fef9e7;
+        }
+
+        .timer-icon {
+            width: 32px;
+            height: 32px;
+            margin-right: 12px;
+        }
+
+        /* Testo più leggibile */
+        .content {
+            flex-grow: 1;
+        }
+
+        .content p {
+            line-height: 1.8; /* Aumentato per riposare l'occhio */
+            margin-bottom: 25px;
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 850px;
+        }
+
+        .content a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-bottom 0.3s ease;
+            font-weight: 500;
+        }
+
+        .content a:hover {
+            border-bottom: 1px solid var(--accent-blue);
+        }
+
+        /* Bottoni rifiniti */
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .btn {
+            background-color: var(--bg-button);
+            color: var(--text-main);
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px; /* Arrotondamento più morbido */
+            font-size: 0.95rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            border: 1px solid #e0e0e0;
+        }
+
+        .btn:hover {
+            background-color: var(--bg-hover);
+            transform: translateY(-2px); /* Effetto sollevamento */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .arrow {
+            font-size: 1.1rem;
+            margin: 0 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="main-container">
+        <header class="header-row">
+            <h1 class="title">Esplorazione delle WCAG 2.2</h1>
+            
+            <div class="timer-container">
+                <svg class="timer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>2 minuti</span>
+            </div>
+        </header>
+
+        <section class="content">
+            <p>Come primo passo, ti chiedo di dare un’occhiata alle <a href="https://www.w3.org/Translations/WCAG22-it/" target="_blank">Web Content Accessibility Guidelines 2.2</a>, le linee guida ufficiali e riconosciute a livello internazionale per la progettazione di contenuti accessibili.</p>
+            <p><strong>Esplora liberamente il documento per qualche minuto</strong>, giusto per farti un’idea della sua struttura e dei contenuti.</p>
+            <p>Quando hai terminato, torna qui per proseguire con i passaggi successivi.</p>
+        </section>
+
+        <footer class="navigation">
+            <a href="index.html" class="btn">
+                <span class="arrow">&lsaquo;</span> Torna indietro
+            </a>
+            <a href="step3.html" class="btn">
+                Passa all'attività successiva <span class="arrow">&rsaquo;</span>
+            </a>
+        </footer>
+    </main>
+
+</body>
+</html>

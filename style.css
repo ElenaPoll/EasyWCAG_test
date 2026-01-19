@@ -1,0 +1,67 @@
+/* Reset dei margini e scelta del font */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenitore principale che occupa l'area visiva */
+.main-container {
+    width: 85%;
+    max-width: 1000px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Stile del titolo verde */
+.title {
+    color: #88b04b; /* Verde simile allo screenshot */
+    font-size: 2.5rem;
+    margin-bottom: 80px;
+}
+
+/* Stile dei paragrafi */
+.content p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    max-width: 850px;
+}
+
+/* Posizionamento del pulsante in basso a destra */
+.footer {
+    margin-top: auto; /* Spinge il footer in fondo */
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+}
+
+/* Stile del pulsante */
+.btn-start {
+    background-color: #eeeeee;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.btn-start:hover {
+    background-color: #e0e0e0;
+}
+
+.arrow {
+    margin-left: 10px;
+    font-weight: bold;
+}

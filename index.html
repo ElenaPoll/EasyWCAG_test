@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benvenuto - EasyWCAG</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #88b04b;
+            --text-main: #2c3e50;
+            --text-light: #5f6a72;
+            --bg-button: #f8f9fa;
+            --bg-hover: #e9ecef;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .main-container {
+            width: 85%;
+            max-width: 1000px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 60px 0;
+            box-sizing: border-box;
+        }
+
+        /* Titolo coerente */
+        .header-row {
+            margin-bottom: 60px;
+        }
+
+        .title {
+            color: var(--primary-green);
+            font-size: 2.4rem;
+            margin: 0;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+
+        /* Testo coerente */
+        .content {
+            flex-grow: 1;
+        }
+
+        .content p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 850px;
+        }
+
+        .content strong {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        /* Footer con bottone a destra */
+        .navigation {
+            display: flex;
+            justify-content: flex-end; /* Sposta tutto a destra */
+            margin-top: auto;
+            padding-bottom: 20px;
+        }
+
+        .btn {
+            background-color: var(--bg-button);
+            color: var(--text-main);
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            border: 1px solid #e0e0e0;
+        }
+
+        .btn:hover {
+            background-color: var(--bg-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .arrow {
+            font-size: 1.1rem;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="main-container">
+        <header class="header-row">
+            <h1 class="title">Benvenuto</h1>
+        </header>
+
+        <section class="content">
+            <p>Ciao! Grazie per la disponibilità a partecipare a questo test.</p>
+            <p>Ti verrà chiesto di svolgere alcune semplici attività utili a valutare l’usabilità di <strong>EasyWCAG</strong>, uno strumento pensato per supportare progettisti e sviluppatori nell’avvicinamento alle Linee Guida per l’Accessibilità dei Contenuti Web <em>(Web Content Accessibility Guidelines, WCAG)</em>.</p>
+            <p>Ogni passaggio ti verrà spiegato passo dopo passo e potrai svolgere tutto comodamente dal tuo computer.</p>
+            <p>Ti ricordo che non è importante che tu svolga correttamente i seguenti compiti, non ne terrò traccia, ma sarà importante avere la tua opinione tramite un questionario che ti chiederò di compilare come ultima attività.</p>
+<p>Segui le indicazioni e, per qualsiasi dubbio, non esitare a <a href="mailto:elenapolleri@gmail.com">contattarmi</a>.</p>        </section>
+
+        <footer class="navigation">
+            <a href="step2.html" class="btn">
+                Inizia <span class="arrow">&rsaquo;</span>
+            </a>
+        </footer>
+    </main>
+
+</body>
+</html>

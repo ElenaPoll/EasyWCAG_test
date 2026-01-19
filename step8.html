@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 3 - Task 1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Fira+Code:wght@400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #88b04b;
+            --timer-yellow: #f1c40f;
+            --text-main: #2c3e50;
+            --text-light: #5f6a72;
+            --bg-button: #f8f9fa;
+            --bg-hover: #e9ecef;
+            /* Sfondo codice ancora più chiaro e leggero */
+            --code-bg: #fcf8e8; 
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .main-container {
+            width: 85%;
+            max-width: 1000px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 50px 0;
+            box-sizing: border-box;
+        }
+
+        .header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .title {
+            color: var(--primary-green);
+            font-size: 2.4rem;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .timer-container {
+            display: flex;
+            align-items: center;
+            color: var(--timer-yellow);
+            font-weight: 600;
+            font-size: 1.1rem;
+            white-space: nowrap; /* Forza il testo su un'unica riga */
+        }
+
+        .timer-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 12px;
+        }
+
+        .content {
+            flex-grow: 1;
+        }
+
+        .content p {
+            line-height: 1.7;
+            margin-bottom: 15px;
+            font-size: 1.15rem;
+            color: var(--text-light);
+            max-width: 900px;
+        }
+
+        .code-wrapper {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .code-box {
+            background-color: var(--code-bg);
+            padding: 40px 50px;
+            border-radius: 35px;
+            font-family: 'Fira Code', monospace;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #4a4534;
+            width: fit-content;
+            min-width: 500px;
+            border: 1px solid #f2efdc; /* Un bordino quasi invisibile per dare definizione */
+        }
+
+        .code-box pre {
+            margin: 0;
+            white-space: pre-wrap;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: auto;
+            padding-bottom: 20px;
+        }
+
+        .btn {
+            background-color: var(--bg-button);
+            color: var(--text-main);
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            transition: all 0.2s ease;
+            border: 1px solid #e0e0e0;
+        }
+
+        .btn:hover {
+            background-color: var(--bg-hover);
+            transform: translateY(-2px);
+        }
+
+        .arrow {
+            font-size: 1.1rem;
+            margin: 0 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="main-container">
+        <header class="header-row">
+            <h1 class="title">Task 5</h1>
+            
+            <div class="timer-container">
+                <svg class="timer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>Quanto necessario</span>
+            </div>
+        </header>
+
+        <section class="content">
+            <p>Ottimo! Ora ti chiedo di <strong> provare a ripetere i task precedenti</strong>, utilizzando <a href="https://elenapoll.github.io/easywcag/" target="_blank">EasyWCAG</a> come strumento di supporto per la tua analisi.</p>
+            <p>Dai un’occhiata al codice qui sotto e prova a valutarne l’accessibilità.</p>
+            <p>Quando hai terminato, torna qui per proseguire con i passaggi successivi.</p>
+
+            <div class="code-wrapper">
+                <div class="code-box">
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Recensione di Viaggio&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h2&gt;La Magia di Parigi&lt;/h2&gt;
+  &lt;p&gt;La città ti accoglie con una luce unica. Di fronte a tanta 
+  bellezza non puoi fare altro che esclamare &lt;q&gt;C'est 
+  magnifique!&lt;/q&gt; e lasciarti trasportare dall'atmosfera.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+                </div>
+            </div>
+        </section>
+
+        <footer class="navigation">
+            <a href="step7.html" class="btn">
+                <span class="arrow">&lsaquo;</span> Torna indietro
+            </a>
+            <a href="step9.html" class="btn">
+                Passa all'attività successiva <span class="arrow">&rsaquo;</span>
+            </a>
+        </footer>
+    </main>
+
+</body>
+</html>

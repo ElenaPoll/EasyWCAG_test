@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 4 - Task 2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #88b04b;
+            --timer-yellow: #f1c40f;
+            --text-main: #2c3e50;
+            --text-light: #5f6a72;
+            --bg-button: #f8f9fa;
+            --bg-hover: #e9ecef;
+            --accent-blue: #3498db;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .main-container {
+            width: 85%;
+            max-width: 1000px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 50px 0;
+            box-sizing: border-box;
+        }
+
+        .header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .title {
+            color: var(--primary-green);
+            font-size: 2.4rem;
+            margin: 0;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+
+        .timer-container {
+            display: flex;
+            align-items: center;
+            color: var(--timer-yellow);
+            font-weight: 600;
+            font-size: 1.1rem;
+            white-space: nowrap;
+        }
+
+        .timer-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 12px;
+        }
+
+        .content {
+            flex-grow: 1;
+        }
+
+        .content p {
+            line-height: 1.8;
+            margin-bottom: 25px;
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 900px;
+        }
+
+        /* Link WCAG */
+        .content a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .content a:hover {
+            border-bottom: 1px solid var(--accent-blue);
+        }
+
+        /* Grassetto per il task */
+        .highlight-task {
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: auto;
+            padding-bottom: 20px;
+        }
+
+        .btn {
+            background-color: var(--bg-button);
+            color: var(--text-main);
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            border: 1px solid #e0e0e0;
+        }
+
+        .btn:hover {
+            background-color: var(--bg-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .arrow {
+            font-size: 1.1rem;
+            margin: 0 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="main-container">
+        <header class="header-row">
+            <h1 class="title">Task 2</h1>
+            
+            <div class="timer-container">
+                <svg class="timer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>Quanto necessario</span>
+            </div>
+        </header>
+
+        <section class="content">
+            <p>Molto bene! Il prossimo compito consiste nell’<span class="highlight-task">individuare tutte le indicazioni di competenza dello sviluppatore relative alla progettazione accessibile di una tabella</span>.</p>
+            <p>Ti ricordo di fare riferimento esclusivamente al testo delle <a href="https://www.w3.org/Translations/WCAG22-it/" target="_blank">WCAG 2.2</a> come guida durante l’attività.</p>
+            <p>Quando avrai completato il compito, torna qui per procedere con i passaggi successivi.</p>
+        </section>
+
+        <footer class="navigation">
+            <a href="step3.html" class="btn">
+                <span class="arrow">&lsaquo;</span> Torna indietro
+            </a>
+            <a href="step5.html" class="btn">
+                Passa all'attività successiva <span class="arrow">&rsaquo;</span>
+            </a>
+        </footer>
+    </main>
+
+</body>
+</html>
